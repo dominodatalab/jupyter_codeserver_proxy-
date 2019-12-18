@@ -18,7 +18,7 @@ def setup_codeserver():
             working_dir = os.getenv("JUPYTER_SERVER_ROOT", ".")
 
         return [full_path, working_dir, '--port=' + str(port), "--auth none", " --disable-telemetry", "--allow-http"  ]
- ]
+ 
         
     return {
         'command': _codeserver_command,
