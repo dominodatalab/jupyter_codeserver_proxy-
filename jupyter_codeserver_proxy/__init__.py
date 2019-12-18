@@ -17,7 +17,7 @@ def setup_codeserver():
         if working_dir is None:
             working_dir = os.getenv("JUPYTER_SERVER_ROOT", ".")
 
-        return [code-server ${DOMINO_WORKING_DIR} --user-data-dir ${DOMINO_WORKING_DIR}/vscode-settings --auth none --port ${1:-8888} --disable-telemetry --extensions-dir ${HOME}/.local/share/code-server/extensions
+        return [full_path, working_dir, '--port=' + str(port), "--auth none", " --disable-telemetry", "--allow-http"  ]
  ]
         
     return {
