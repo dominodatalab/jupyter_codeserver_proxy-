@@ -17,7 +17,7 @@ def setup_codeserver():
         if working_dir is None:
             working_dir = os.getenv("JUPYTER_SERVER_ROOT", ".")
 
-        return [full_path, working_dir, '--port=' + str(port), "--no-auth", " --disable-telemetry", "--allow-http"  ]
+        return ['/var/opt/workspaces/vscode/start',port  ]
         
     return {
         'command': _codeserver_command,
